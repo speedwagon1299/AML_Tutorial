@@ -61,7 +61,7 @@ def parse_args():
                         type=float, default=0.01)
 
     # parse args
-    args = parser,parse_args()
+    args = parser.parse_args()
 
     # return args
     return args
