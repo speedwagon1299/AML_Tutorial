@@ -20,7 +20,6 @@ jobs:
 
     - name: Set up Azure subscription and WS
       run: |
-        az account set --subscription 1761fabd-6c59-467f-8fa7-154c65ab2a0b
         az ml workspace set -w aml-tutorial-dev -g tutorial-dev-rg
     
     - name: Submit Azure ML job
