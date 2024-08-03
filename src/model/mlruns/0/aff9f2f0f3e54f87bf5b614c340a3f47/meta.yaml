@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/sriha/OneDrive/Desktop/Projects/AzureProjects/AML_Tutorial/src/model/mlruns/0/aff9f2f0f3e54f87bf5b614c340a3f47/artifacts
+end_time: 1722425496252
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: aff9f2f0f3e54f87bf5b614c340a3f47
+run_name: rare-ram-661
+run_uuid: aff9f2f0f3e54f87bf5b614c340a3f47
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722425496208
+status: 3
+tags: []
+user_id: sriha

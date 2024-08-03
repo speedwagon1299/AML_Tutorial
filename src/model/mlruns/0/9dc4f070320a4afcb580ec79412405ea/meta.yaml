@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/sriha/OneDrive/Desktop/Projects/AzureProjects/AML_Tutorial/src/model/mlruns/0/9dc4f070320a4afcb580ec79412405ea/artifacts
+end_time: 1722425496197
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9dc4f070320a4afcb580ec79412405ea
+run_name: fortunate-boar-784
+run_uuid: 9dc4f070320a4afcb580ec79412405ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722425490791
+status: 3
+tags: []
+user_id: sriha

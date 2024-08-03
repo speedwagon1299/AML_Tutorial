@@ -1,0 +1,39 @@
+https://microsoftlearning.github.io/mslearn-mlops/documentation/00-script.html
+Challenge 0: Convert a notebook to production code
+
+-------------------------------------------------------------------------------------------------------------------
+
+https://microsoftlearning.github.io/mslearn-mlops/documentation/01-aml-job.html
+Challenge 1: Create an Azure Machine Learning job
+
+# To create the group and configure default
+az group create --name "tutorial-dev-rg" --location "southindia"
+az configure --defaults group="tutorial-dev-rg"
+
+# To create the workspace and configure default
+az ml workspace create --name "aml-tutorial-dev"
+az configure --defaults workspace="aml-tutorial-dev"
+
+# To manage the Compute Instance
+az ml compute create --name "tutorial-test-vm" --size STANDARD_DS11_V2 --type ComputeInstance
+az ml compute stop --name "tutorial-test-vm" 
+az ml compute delete --name "tutorial-test-vm" --yes
+az ml compute start --name "tutorial-test-vm" 
+
+# To create environment using yaml files in appropriate directory (edit basic-env-ml.yml)
+az ml environment create --file basic-env.yml
+
+# To create and archive a [DATA] dataset asset (check data-local-path.yml) [DONT KNOW HOW TO DELETE]
+az ml data create --file data-local-path.yml 
+az ml data archive --name diabetes-dataset --version 1
+
+# To create and run a job
+az ml job create -f .\job.yml -n job1
+az ml job show -n job1
+
+-------------------------------------------------------------------------------------------------------------------
+
+https://microsoftlearning.github.io/mslearn-mlops/documentation/02-github-actions
+Challenge 2: Trigger the Azure Machine Learning job with GitHub Actions
+
+az ad sp create-for-rbac --name "aml-tutorial-dev-sp" --role contributor --scopes /subscriptions/1761fabd-6c59-467f-8fa7-154c65ab2a0b/resourceGroups/tutorial-dev-rg --sdk-auth
