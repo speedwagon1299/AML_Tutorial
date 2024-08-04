@@ -1,18 +1,23 @@
 name: Pull Request Workflow
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  verify:
+  pytest:
+    name: Pytest
     runs-on: ubuntu-latest
-
     steps:
-    - name: Check out code
-      uses: actions/checkout@v3
+      - name: Check out repo
+        uses: actions/checkout@main
 
-    - name: Placeholder
-      run: |
-        echo "Will add code checks here in next challenge"
+      - name: Use Python version 3.8
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt  
+
+      - name: Run pytest
+        run: pytest tests/test_train.py
