@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/sriha/OneDrive/Desktop/Projects/AzureProjects/AML_Tutorial/src/model/mlruns/0/be1d3009821549709eb00200d3e7947c/artifacts
+end_time: 1722754743780
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: be1d3009821549709eb00200d3e7947c
+run_name: masked-ray-555
+run_uuid: be1d3009821549709eb00200d3e7947c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722754731750
+status: 3
+tags: []
+user_id: sriha

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/sriha/OneDrive/Desktop/Projects/AzureProjects/AML_Tutorial/src/model/mlruns/0/79499d8043ac44dabe43c72bd7802558/artifacts
+end_time: 1722754743851
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 79499d8043ac44dabe43c72bd7802558
+run_name: sedate-crab-437
+run_uuid: 79499d8043ac44dabe43c72bd7802558
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722754743790
+status: 3
+tags: []
+user_id: sriha

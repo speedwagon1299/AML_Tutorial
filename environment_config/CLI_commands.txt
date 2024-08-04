@@ -31,7 +31,7 @@ az ml data create --file data-local-path.yml
 az ml data archive --name diabetes-dataset --version 1
 
 # To create and run a job
-az ml job create -f .\job.yml -n job1
+az ml job create -f .\job.yml -n job_terminal
 az ml job show -n job1
 
 -------------------------------------------------------------------------------------------------------------------
