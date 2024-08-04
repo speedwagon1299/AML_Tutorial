@@ -43,3 +43,9 @@ az ad sp create-for-rbac --name "aml-tutorial-dev-sp" --role contributor --scope
 
 Challenge 3: Trigger GitHub Actions with feature-based development
 
+-------------------------------------------------------------------------------------------------------------------
+
+Challenge 4: Work with linting and unit testing
+
+-------------------------------------------------------------------------------------------------------------------
+
