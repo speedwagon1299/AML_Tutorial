@@ -8,7 +8,7 @@ inputs:
   training_data: 
     type: uri_folder 
     path: azureml://subscriptions/1761fabd-6c59-467f-8fa7-154c65ab2a0b/resourcegroups/tutorial-dev-rg/workspaces/aml-tutorial-dev/datastores/workspaceblobstore/paths/LocalUpload/534e63694838be564a42c83cb065f8fd/data/
-  reg_rate: 0.01
+  reg_rate: 0.02
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
 compute: azureml:tutorial-test-vm
 experiment_name: diabetes-aml-tutorial
