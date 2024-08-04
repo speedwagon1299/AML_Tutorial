@@ -1,0 +1,56 @@
+
+Folder       |	Purpose
+===================================================================================================================
+.cloud       |	Store cloud-specific code and artifacts in this folder. The artifacts include configuration files 
+             |  for the Azure Machine Learning workspace, including compute target definitions, jobs, registered models, 
+             |  and endpoints.
+===================================================================================================================
+.github/wfs  |	Store Azure DevOps or GitHub artifacts like YAML pipelines or code owners in this folder.
+===================================================================================================================
+src 	     |  Include the actual code that's developed as part of the project in this folder. This folder can contain 
+             |  Python packages and some scripts that are used for the respective steps of the machine learning pipeline. 
+             |  We recommend separating individual steps that need to be done in this folder. Common steps are 
+             |  preprocessing, model training, and model registration. Define dependencies like Conda dependencies, 
+             |  Docker images, or others for each folder.
+===================================================================================================================
+docs	     |  Use this folder for documentation purposes. This folder stores Markdown files and images to describe the
+             |  project.
+===================================================================================================================
+pipelines	 |  Store Azure Machine Learning pipelines definitions in YAML or Python in this folder.
+===================================================================================================================
+tests	     |  Write unit and integration tests that need to be executed to discover bugs and issues early during the 
+             |  project in this folder.
+===================================================================================================================
+notebooks	 |  Separate Jupyter notebooks from the actual Python project with this folder. Inside the folder, each 
+             |  individual should have a subfolder to check in their notebooks and prevent Git merge conflicts.
+
+Challenge 0: Convert a notebook to production code
+https://microsoftlearning.github.io/mslearn-mlops/documentation/00-script.html
+
+1. Convert notebook to script .py file keeping only essential and logging code
+2. Fixed code in src/model/train.py to include autolog from mlflow
+3. Create yaml file (job) to execute python commands appropriately
+
+------------------------------------------------------------------------------------------------------------------------
+
+Challenge 1: Create an Azure Machine Learning job
+https://microsoftlearning.github.io/mslearn-mlops/documentation/01-aml-job.html
+
+1. Create resource group (tutorial-dev-rg) and workspace (aml-tutorial-dev), configure defaults
+2. Create yaml file for environment configs (basic-env-ml) and another yaml file to point to the environment file (basic-env)
+3. Create yaml file for linking local dataset to azure data (data-local-path)
+4. Config environment and create data using created yaml files
+5. Create compute cluster with 0 min instances (delete when finished)
+6. Create job with job yaml file
+
+------------------------------------------------------------------------------------------------------------------------
+
+Challenge 2: Trigger the Azure Machine Learning job with GitHub Actions
+https://microsoftlearning.github.io/mslearn-mlops/documentation/02-github-actions
+
+1. Create project in DevOps (linked to GitHub) and create a service connection (aml-tutorial-dev-sc) 
+2. Create a service principal (aml-tutorial-dev-sp) and store the credentials in the GitHub repo as a secret
+3. Create GitHub workflow yaml file (02-manual-trigger-job) with appropriate commands for the pipeline
+4. Ensure AML compute cluster is active and the name is appropriately referenced in the job yaml file
+
+------------------------------------------------------------------------------------------------------------------------

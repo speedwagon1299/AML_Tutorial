@@ -1,9 +1,7 @@
-https://microsoftlearning.github.io/mslearn-mlops/documentation/00-script.html
 Challenge 0: Convert a notebook to production code
 
 -------------------------------------------------------------------------------------------------------------------
 
-https://microsoftlearning.github.io/mslearn-mlops/documentation/01-aml-job.html
 Challenge 1: Create an Azure Machine Learning job
 
 # To create the group and configure default
@@ -30,39 +28,13 @@ az ml environment create --file basic-env.yml
 az ml data create --file data-local-path.yml 
 az ml data archive --name diabetes-dataset --version 1
 
-# To create and run a job
-az ml job create -f .\job.yml -n job_terminal
-az ml job show -n job1
+# To create and run a job (use quotes to name)
+# Delete existing name job so it can run smoothly through azure ml studio
+az ml job create -f .\job.yml -n "job_final"
+az ml job show -n job_final
 
 -------------------------------------------------------------------------------------------------------------------
 
-https://microsoftlearning.github.io/mslearn-mlops/documentation/02-github-actions
 Challenge 2: Trigger the Azure Machine Learning job with GitHub Actions
 
 az ad sp create-for-rbac --name "aml-tutorial-dev-sp" --role contributor --scopes /subscriptions/1761fabd-6c59-467f-8fa7-154c65ab2a0b/resourceGroups/tutorial-dev-rg --sdk-auth
-
-
-Folder       |	Purpose
-===================================================================================================================
-.cloud       |	Store cloud-specific code and artifacts in this folder. The artifacts include configuration files 
-             |  for the Azure Machine Learning workspace, including compute target definitions, jobs, registered models, 
-             |  and endpoints.
-===================================================================================================================
-.ado/.github |	Store Azure DevOps or GitHub artifacts like YAML pipelines or code owners in this folder.
-===================================================================================================================
-src 	     |  Include the actual code that's developed as part of the project in this folder. This folder can contain 
-             |  Python packages and some scripts that are used for the respective steps of the machine learning pipeline. 
-             |  We recommend separating individual steps that need to be done in this folder. Common steps are 
-             |  preprocessing, model training, and model registration. Define dependencies like Conda dependencies, 
-             |  Docker images, or others for each folder.
-===================================================================================================================
-docs	     |  Use this folder for documentation purposes. This folder stores Markdown files and images to describe the
-             |  project.
-===================================================================================================================
-pipelines	 |  Store Azure Machine Learning pipelines definitions in YAML or Python in this folder.
-===================================================================================================================
-tests	     |  Write unit and integration tests that need to be executed to discover bugs and issues early during the 
-             |  project in this folder.
-===================================================================================================================
-notebooks	 |  Separate Jupyter notebooks from the actual Python project with this folder. Inside the folder, each 
-             |  individual should have a subfolder to check in their notebooks and prevent Git merge conflicts.
