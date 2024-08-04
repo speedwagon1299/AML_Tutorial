@@ -42,10 +42,12 @@ def split_data(df):
     X = df.drop(['Diabetic'], axis=1).values
     y = df['Diabetic'].values
 
-    X_train, X_test, y_train, y_test = train_test_split \
-    (X, y,test_size=0.2, random_state=42)
-    
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
+
     return X_train, X_test, y_train, y_test
+
 
 
 def train_model(reg_rate, X_train, y_train):
