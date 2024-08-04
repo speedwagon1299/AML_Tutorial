@@ -38,3 +38,8 @@ az ml job show -n job_final
 Challenge 2: Trigger the Azure Machine Learning job with GitHub Actions
 
 az ad sp create-for-rbac --name "aml-tutorial-dev-sp" --role contributor --scopes /subscriptions/1761fabd-6c59-467f-8fa7-154c65ab2a0b/resourceGroups/tutorial-dev-rg --sdk-auth
+
+-------------------------------------------------------------------------------------------------------------------
+
+Challenge 3: Trigger GitHub Actions with feature-based development
+

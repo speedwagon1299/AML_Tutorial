@@ -50,7 +50,13 @@ https://microsoftlearning.github.io/mslearn-mlops/documentation/02-github-action
 
 1. Create project in DevOps (linked to GitHub) and create a service connection (aml-tutorial-dev-sc) 
 2. Create a service principal (aml-tutorial-dev-sp) and store the credentials in the GitHub repo as a secret
-3. Create GitHub workflow yaml file (02-manual-trigger-job) with appropriate commands for the pipeline
+3. Create GitHub workflow yaml file (02-manual-trigger-job) with appropriate commands for the pipeline [job name must be unique]
 4. Ensure AML compute cluster is active and the name is appropriately referenced in the job yaml file
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Challenge 3: Trigger GitHub Actions with feature-based development
+https://microsoftlearning.github.io/mslearn-mlops/documentation/03-trigger-workflow.html
+
+1. Create 03-pull-rq yaml trigger file to activate when pull request to main is performed
+2. Add branch protection to main branch through GitHub GUI
