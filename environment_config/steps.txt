@@ -59,4 +59,27 @@ Challenge 3: Trigger GitHub Actions with feature-based development
 https://microsoftlearning.github.io/mslearn-mlops/documentation/03-trigger-workflow.html
 
 1. Create 03-pull-rq yaml trigger file to activate when pull request to main is performed
-2. Add branch protection to main branch through GitHub GUI
+2. Add branch protection to main branch through GitHub GUI (Pull request review)
+3. Create new branch with git checkout -b <branch_name>, make a change and push
+4. Verify that the workflow runs on pull request
+
+------------------------------------------------------------------------------------------------------------------------
+
+Challenge 4: Work with linting and unit testing
+https://microsoftlearning.github.io/mslearn-mlops/documentation/04-unit-test-linting
+
+1. Individually run jobs on workflow manual to make GitHub recognize it
+2. Set up flake8 and pytest jobs in pull request triggered yaml file
+3. Edit branch rule to run both jobs (Linting and Pytest) before allowing Pull request
+4. Verify with new branch and delete after pull request
+
+------------------------------------------------------------------------------------------------------------------------
+
+Challenge 5: Work with environments
+https://microsoftlearning.github.io/mslearn-mlops/documentation/05-environments.html
+
+1. Go to GitHub repo settings and make the repo public
+2. Create Development and Production environment and give AZURE_CREDENTIALS (service principal) to both of them
+3. Add an approval check for Production environment and remove AZURE_CREDENTIALS from global secrets
+3. New local data path for production data file
+4. Similar to how job.yaml calls dev dataset, create one for production to test out the model (job2.yml)
