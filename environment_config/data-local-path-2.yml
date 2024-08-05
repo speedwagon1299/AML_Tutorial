@@ -1,0 +1,5 @@
+$schema: https://azuremlschemas.azureedge.net/latest/data.schema.json
+name: diabetes-dataset-production-new
+version: 1
+path: C:\Users\sriha\OneDrive\Desktop\Projects\AzureProjects\AML_Tutorial\production\data\
+description: "Dataset containing diabetes data (production)"

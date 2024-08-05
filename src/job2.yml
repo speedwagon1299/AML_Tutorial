@@ -1,0 +1,15 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+code: model
+command: >-
+  python train.py
+  --training_data ${{inputs.training_data}}
+  --reg_rate ${{inputs.reg_rate}}
+inputs:
+  training_data: 
+    type: uri_folder 
+    path: azureml://subscriptions/1761fabd-6c59-467f-8fa7-154c65ab2a0b/resourcegroups/tutorial-dev-rg/workspaces/aml-tutorial-dev/datastores/workspaceblobstore/paths/LocalUpload/ff469ba855467299203a8f860ea1bd33/data/
+  reg_rate: 0.01
+environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
+compute: azureml:tutorial-test-vm
+experiment_name: diabetes-aml-tutorial-production
+description: Building a job to run python script to train diabetes predictor model
