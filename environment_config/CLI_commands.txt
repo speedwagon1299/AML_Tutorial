@@ -49,3 +49,6 @@ Challenge 4: Work with linting and unit testing
 
 -------------------------------------------------------------------------------------------------------------------
 
+Challenge 5: Work with environments
+
+az ml data create --file data-local-path-2.yml 
